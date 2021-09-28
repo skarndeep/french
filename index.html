@@ -27,13 +27,13 @@ input[type=text] {
 
 <form name"dse">
   <label for="p1">Paper 1 (ORAL) [Out of 100]</label>
-  <input type="text" id="p1" name="p1">
+  <input type="text" id="p1" name="p1" onkeyup="sumValues(this.p1);">
   <br>
   <label for="p2">Paper 2 (READING) [Out of 70]</label>
-  <input type="text" id="p2" name="p2">
+  <input type="text" id="p2" name="p2" onkeyup="sumValues(this.p2);">
   <br>
   <label for="p3">Paper 3 (ESSAY) [Out of 40]</label>
-  <input type="text" id="p3" name="p3">
+  <input type="text" id="p3" name="p3" onkeyup="sumValues(this.p3);">
   <br><br>
   <label for="score">DSE score</label>
   <input type="text" id="score" name="score" readonly>
