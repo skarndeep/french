@@ -1,43 +1,47 @@
+<!DOCTYPE html>
 
-<head>
-<style> 
-input[type=text] {
-  width: 70%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-</style>
-<script type="text/javascript">
-  function sumValues()
-  {
-    var p1, p2, res;
-    p1=Number(document.dse.p1.value);
-    p2=Number(document.dse.p2.value);
-    p3=Number(document.dse.p3.value);
-
-    result=p1*0.4 + p2 + p3*0.75;
-    document.dse.score.score=result;
-  }
-  </script>
-</head>
-<body>
-
-<h2>HKDSE French Grade Calculator</h2>
-
-<form name"dse">
+<html>
+    <head>
+        
+        <title>HKDSE French Grade Calculator</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function calc()
+            {
+                var p1 = parseFloat(document.getElementById('p1').value);
+                var p2 = parseFloat(document.getElementById('p2').value);
+                var p3 = parseFloat(document.getElementById('p3').value);
+                
+                
+                document.getElementById('score').value = p1*0.4+p2+p3*0.75;
+                
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <input type="text" id="n1"/><br/><br/>
+        <input type="text" id="n2"/><br/><br/>
   <label for="p1">Paper 1 (ORAL) [Out of 100]</label>
-  <input type="text" id="p1" name="p1" onkeyup="sumValues(this.p1);">
+  <input type="text" id="p1" name="p1">
   <br>
   <label for="p2">Paper 2 (READING) [Out of 70]</label>
-  <input type="text" id="p2" name="p2" onkeyup="sumValues(this.p2);">
+  <input type="text" id="p2" name="p2">
   <br>
   <label for="p3">Paper 3 (ESSAY) [Out of 40]</label>
-  <input type="text" id="p3" name="p3" onkeyup="sumValues(this.p3);">
+  <input type="text" id="p3" name="p3">
   <br><br>
   <label for="score">DSE score</label>
-  <input type="text" id="score" name="score" readonly>
+  <input type="text" id="score" readonly>
   <input type="button" value"Calculate" onClick="sumValues()">
-</form>
- 
-</body>
+        
+        <button onclick="calc();">=</button>
+        <input type="text" id="score"/>
+        
+    </body>
+</html>
