@@ -21,6 +21,29 @@ table, th, td {
                 
                 document.getElementById('score').value = p1*0.4+p2+p3*0.75;
                 
+                var predictscore = parseFloat(document.getElementById('score').value;
+                
+                if predictscore >= 81
+                                              {
+document.getElementById('predict').value = A;
+                                              }
+                if predictscore >= 71
+                                              {
+document.getElementById('predict').value = B;
+                                              }
+                if predictscore >= 61
+                                              {
+document.getElementById('predict').value = C;
+                                              }
+                if predictscore >= 51
+                                              {
+document.getElementById('predict').value = D;
+                                              }
+                if predictscore >= 42
+                                              {
+document.getElementById('predict').value = E;
+                                              }
+                
             }
             
         </script>
@@ -37,9 +60,11 @@ table, th, td {
   <label for="p3">Paper 3 (ESSAY) [Out of 40]</label>
   <input type="text" id="p3" name="p3">
   <br><br>
+  <button type='button' onclick="calc();">Calculate your score!</button>
+  <br>
   <label for="score">DSE score</label>
-  <button type='button' onclick="calc();">Calculate!</button>
-  <input type="text" id="score" readonly>
+  <text>Score</text><input type="text" id="score" readonly><br>
+  <text>Predicted Grade</text><input type="text" id"predict" readonly>
         </form><br><br>
 
         <head>Recent DSE cut-off</head>
