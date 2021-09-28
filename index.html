@@ -8,21 +8,29 @@ input[type=text] {
   box-sizing: border-box;
 }
 </style>
+<script>
+  function mult(value) {
+  var score ;
+    score = p2 + p3 * 0.75 + p1 * 0.4 ;
+
+  document.getElementById('score').value = score;
+  }
+  </script>
 </head>
 <body>
 
 <h2>HKDSE French Grade Calculator</h2>
 
 <form>
-  <label for="p1">Paper 1 (ORAL)</label>
-  <text>Out of 100</text>
+  <label for="p1">Paper 1 (ORAL) [Out of 100]</label>
   <input type="text" id="p1" name="p1">
-  <label for="p2">Paper 2 (READING)</label>
-  <text>Out of 70</text>
+  <label for="p2">Paper 2 (READING) [Out of 70]</label>
   <input type="text" id="p2" name="p2">
-  <label for="p3">Paper 3 (ESSAY)</label>
-  <text>Out of 40</text>
+  <label for="p3">Paper 3 (ESSAY) [Out of 40]</label>
   <input type="text" id="p3" name="p3">
+  <br><br>
+  <label for="score">DSE score</label>
+  <input type="text" id="score" name="score" readonly>
 </form>
 
 </body>
